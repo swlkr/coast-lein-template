@@ -1,18 +1,15 @@
 (ns {{name}}.core
   (:require [coast.core :as coast]
-            [{{name}}.routes :as routes])
+            [{{name}}.routes :as routes]
+            [coast.components :as c])
   (:gen-class))
 
 (def app
   (-> routes/routes
-      (coast/wrap-defaults coast/site-defaults)
-      (coast/wrap-resource "public")
-      (coast/wrap-with-logger)))
+      (coast/wrap-coast-defaults {:layout c/layout})))
 
-(coast/set-app! app)
+(defn coast []
+  (coast/start-server app)
 
-(defn -main [& [port]]
-  (let [port (-> (or port (coast/env :port))
-                 (coast/parse-int))]
-    (coast/run-server app {:port port})
-    (println (str "Server is listening at http://localhost:" port))))
+  (defn -main [& [port]]
+    (coast/start-server app {:port port})))

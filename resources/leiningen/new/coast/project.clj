@@ -4,7 +4,7 @@
   :min-lein-version "2.6.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [coast "0.1.0-SNAPSHOT"]]
-  :main {{name}}.core
+  :repl-options {:init-ns {{name}}.core}
   :plugins [[lein-environ "1.1.0"]]
   :source-paths ["src"]
   :test-paths ["test"]
@@ -18,7 +18,4 @@
             "gen/model"      ["run" "-m" "coast.generators/model" "{{sanitized}}"]
             "gen/controller" ["run" "-m" "coast.generators/controller" "{{sanitized}}"]
             "gen/view"       ["run" "-m" "coast.generators/view" "{{sanitized}}"]
-            "gen/mvc"        ["run" "-m" "coast.generators/mvc" "{{sanitized}}"]}
-
-  :profiles {:uberjar {:aot :all
-                       :uberjar-name "{{name}}.jar"}})
+            "gen/mvc"        ["run" "-m" "coast.generators/mvc" "{{sanitized}}"]})
