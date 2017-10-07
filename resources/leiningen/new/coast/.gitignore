@@ -9,8 +9,6 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
-*.iml
 .idea/
-.keep
-.DS_Store
-.profiles.clj
+*.iml
+profiles.clj
