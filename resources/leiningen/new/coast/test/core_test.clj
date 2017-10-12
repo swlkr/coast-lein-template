@@ -9,5 +9,5 @@
 
 (deftest not-found-test
   (testing "not-found route"
-    (let [response (app (:uri "/not-found" :request-method :get))]
+    (let [response (app {:uri "/not-found" :request-method :get})]
       (is (= (:status response) 404)))))

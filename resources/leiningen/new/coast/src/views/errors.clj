@@ -1,5 +1,6 @@
 (ns {{name}}.views.errors
-  (:require [{{name}}.components :as c]))
+  (:require [{{name}}.components :as c]
+            [coast.core :as coast]))
 
 (defn not-found []
-  "Not found")
+  (coast/not-found "Not found"))

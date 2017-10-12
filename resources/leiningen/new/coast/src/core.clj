@@ -1,7 +1,7 @@
 (ns {{name}}.core
   (:require [coast.core :as coast]
             [{{name}}.routes :as routes]
-            [coast.components :as c])
+            [{{name}}.components :as c])
   (:gen-class))
 
 (def app
