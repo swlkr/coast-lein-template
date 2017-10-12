@@ -1,4 +1,4 @@
-(defproject coast/lein-template "0.0.11"
+(defproject coast/lein-template "0.0.12"
   :description "A lein template for coast"
   :url "https://coastonclojure.com"
   :license {:name "MIT License"
