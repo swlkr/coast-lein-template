@@ -9,7 +9,7 @@
       (coast/wrap-coast-defaults {:layout c/layout})))
 
 (defn coast []
-  (coast/start-server app)
+  (coast/start-server app))
 
-  (defn -main [& [port]]
-    (coast/start-server app {:port port})))
+(defn -main [& [port]]
+  (coast/start-server app {:port port}))
