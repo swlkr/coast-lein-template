@@ -1,7 +1,7 @@
 (ns {{name}}.components
   (:require [coast.core :as coast]))
 
-(defn layout [& body]
+(defn layout [request body]
   (coast/html5
     [:head
      [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
