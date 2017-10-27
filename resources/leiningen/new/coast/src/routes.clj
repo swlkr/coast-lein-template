@@ -5,5 +5,4 @@
 
 (def routes
   (-> (coast/get "/" home/index)
-      (coast/route-not-found errors/not-found)
-      (coast/match-routes)))
+      (coast/route-not-found errors/not-found)))

@@ -3,7 +3,7 @@
   :url "https://example.com/FIXME"
   :min-lein-version "2.6.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [coast "0.1.0-SNAPSHOT"]]
+                 [coast "0.3.0"]]
   :repl-options {:init-ns {{name}}.core}
   :plugins [[lein-environ "1.1.0"]]
   :source-paths ["src"]
