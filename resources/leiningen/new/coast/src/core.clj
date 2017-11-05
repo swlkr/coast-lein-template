@@ -6,7 +6,6 @@
 
 (def app
   (-> routes/routes
-      (coast/match-routes)
       (coast/wrap-coast-defaults {:layout c/layout})))
 
 (defn coast []
