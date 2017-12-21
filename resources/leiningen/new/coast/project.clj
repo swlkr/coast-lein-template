@@ -3,7 +3,7 @@
   :url "https://example.com/FIXME"
   :min-lein-version "2.6.1"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [coast "0.4.7"]]
+                 [coast "0.4.8"]]
   :repl-options {:init-ns {{name}}.core}
   :main {{name}}.core
   :plugins [[lein-environ "1.1.0"]]
@@ -12,8 +12,8 @@
   :aliases {"db/migrate"   ["run" "-m" "coast.migrations/migrate"]
             "db/rollback"  ["run" "-m" "coast.migrations/rollback"]
             "db/migration" ["run" "-m" "coast.migrations/create"]
-            "db/create"    ["run" "-m" "coast.db/create" "{{sanitized}}_dev"]
-            "db/drop"      ["run" "-m" "coast.db/drop" "{{sanitized}}_dev"]
+            "db/create"    ["run" "-m" "coast.db/create" "{{sanitized}}"]
+            "db/drop"      ["run" "-m" "coast.db/drop" "{{sanitized}}"]
 
             "gen/model"      ["run" "-m" "coast.generators/model" "{{sanitized}}"]
             "gen/controller" ["run" "-m" "coast.generators/controller" "{{sanitized}}"]
