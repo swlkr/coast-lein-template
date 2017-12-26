@@ -15,10 +15,10 @@
             "db/create"    ["run" "-m" "coast.db/create" "{{sanitized}}"]
             "db/drop"      ["run" "-m" "coast.db/drop" "{{sanitized}}"]
 
-            "gen/model"      ["run" "-m" "coast.generators/model" "{{sanitized}}"]
-            "gen/controller" ["run" "-m" "coast.generators/controller" "{{sanitized}}"]
-            "gen/view"       ["run" "-m" "coast.generators/view" "{{sanitized}}"]
-            "gen/mvc"        ["run" "-m" "coast.generators/mvc" "{{sanitized}}"]
-            "gen/sql"        ["run" "-m" "coast.generators/sql" "{{sanitized}}"]}
+            "model/gen"      ["run" "-m" "coast.generators/model" "{{sanitized}}"]
+            "controller/gen" ["run" "-m" "coast.generators/controller" "{{sanitized}}"]
+            "view/gen"       ["run" "-m" "coast.generators/view" "{{sanitized}}"]
+            "mvc/gen"        ["run" "-m" "coast.generators/mvc" "{{sanitized}}"]
+            "sql/gen"        ["run" "-m" "coast.generators/sql" "{{sanitized}}"]}
   :profiles {:uberjar {:aot :all
                        :uberjar-name "{{name}}.jar"}})
