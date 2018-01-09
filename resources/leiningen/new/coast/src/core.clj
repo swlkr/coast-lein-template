@@ -6,7 +6,8 @@
 
 (def app
   (-> routes/routes
-      (coast/wrap-coast-defaults {:layout c/layout})))
+      (coast/wrap-coast-defaults {:layout c/layout
+                                  :error-page c/error-page})))
 
 (defn coast []
   (coast/start-server app))
