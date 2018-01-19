@@ -1,6 +1,6 @@
 {:dev {:env {:db-spec-or-url "postgres://localhost:5432/{{sanitized}}_dev"
              ; use this if your db is password protected
-             ;:admin-db-spec-or-url "postgres://localhost:5432/{{sanitized}}_dev"
+             ;:admin-db-spec-or-url "postgres://localhost:5432/postgres"
              :secret "{{dev-secret}}"
              :port "1337"
              :coast-env "dev"}}
@@ -13,7 +13,7 @@
                                       :password "helloworld"}}}
  :test {:env {:db-spec-or-url "postgres://localhost:5432/{{sanitized}}_test"
               ; use this if your db is password protected
-              ;:admin-db-spec-or-url "postgres://localhost:5432/{{sanitized}}_test"
+              ;:admin-db-spec-or-url "postgres://localhost:5432/postgres"
               :secret "{{test-secret}}"
               :port "1337"
               :coast-env "test"}}}
